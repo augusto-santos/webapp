@@ -1,8 +1,26 @@
 import React from 'react'
 import Nav from '../Navigation'
+import Dropdown from '../Dropdown'
 import s from './Header.css'
 
 class Header extends React.Component{
+
+    constructor(props){
+        super(props)
+
+        this.dropdownList = this.dropdownList.bind(this)
+    }
+
+    dropdownList(){
+        return(
+            <ul className={s.menus}>
+                <li><a href="#" className={s.item}>Teste</a></li>
+                <li><a href="#" className={s.item}>Menu</a></li>
+                <li><a href="#" className={s.item}>Dropdown</a></li>
+            </ul>
+        )
+    }
+
     render(){
         return(
             <header className={s.wrapper}>
@@ -20,11 +38,9 @@ class Header extends React.Component{
                             <i className="material-icons">search</i>
                         </div>
                     </div>
-                    <div className={s.notification}>
-                        <div className={s.navButton}>
-                            <i className="material-icons">notifications</i>
-                        </div>
-                    </div>
+                    <Dropdown classes={s.navButton} open={this.dropdownList()} >
+                        <i className="material-icons">more_vert</i>
+                    </Dropdown>
                     <div className={s.avatar}>
                         <div className={s.navButton}>
 

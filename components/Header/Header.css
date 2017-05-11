@@ -45,3 +45,29 @@
 .search{
     justify-content: flex-end;
 }
+
+.item{
+    color: #333;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    width: 256px;
+    padding-left: 42px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+    .item:hover{
+        background: #eee;
+        transition: all .5s linear;
+    }
+    .item:active{
+        background: #3e3e3e;
+        transition: all .5s linear;
+    }
+
+
+.menus{
+    padding: 8px 0;
+}

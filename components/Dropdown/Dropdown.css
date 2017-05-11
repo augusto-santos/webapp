@@ -1,0 +1,73 @@
+.dropdown{
+    
+}
+
+.Open{
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    z-index: 30;
+}
+
+.Menu{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    left: auto;
+    background: #fff;
+    background-clip: padding-box;
+    border-radius: 2px;
+    border: 1px solid rgba(27,31,35,0.15);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    z-index: 100;
+    transform-origin: top;
+}
+    .aMenu::after, .aMenu::before{
+        display: inline-block;
+        position: absolute;
+        content: "";
+    }
+    .aMenu::before{
+        top: -16px;
+        right: 9px;
+        left: auto;
+        border: 8px solid transparent;
+        border-bottom-color: rgba(27,31,35,0.15);
+    }
+    .aMenu::after{
+        top: -12px;
+        right: 62px;
+        left: auto;
+        border: 7px solid transparent;
+        border-bottom-color: #fff;
+    }
+
+.menudropAnim{
+    animation: menuDropdown .1s ease-in;
+}
+
+.menudropAnimRev{
+    animation: menuDropdownRev .1s ease-out;
+}
+
+@keyframes menuDropdownRev{
+    0%{
+        transform: scaleY(1);
+    }
+    100%{
+        transform: scaleY(0);
+    }
+}
+
+@keyframes menuDropdown{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
