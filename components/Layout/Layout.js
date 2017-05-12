@@ -9,21 +9,46 @@
 
 import React, { PropTypes } from 'react';
 import Header from '../Header';
+import Sidebar from '../Sidebar'
 import s from './Layout.css';
 
-function Layout(props) {
-  return (
-    <div className={s.root}>
-      <Header />
-      <div className={s.container}>
-        <main className={s.content}>
-          <div {...props} className={`${s.content}${props.className ? ` ${props.className}` : ''}`} />
-        </main>
-      </div>
-    </div>
-  );
-}
+class Layout extends React.Component{
 
-Layout.propTypes = { className: PropTypes.string };
+  constructor(props){
+    super(props)
+    this.state = { siderbarOpen: false }
+
+    this.handleSidebar = this.handleSidebar.bind(this)
+    this.outSidebar = this.outSidebar.bind(this)
+  }
+
+  handleSidebar(){
+    console.log('work')
+    this.setState({ siderbarOpen: !this.state.siderbarOpen })
+  }
+
+  outSidebar(){
+    return(
+      <div className={s.outSidebarContainer} onClick={this.handleSidebar} ></div>
+    )
+  }
+
+  render(){
+    return (
+      <div className={s.root}>
+        <Header toggle={this.handleSidebar} />
+        <Sidebar isOpen={this.state.siderbarOpen} />
+        <div className={s.container}>
+          <div className={s.content}>
+            <div className={`${s.content} ${this.props.className ? ` ${this.props.className}` : ''}`}>
+              {this.props.children}
+            </div>
+          </div>
+        </div>
+        {this.state.siderbarOpen ? this.outSidebar() : null}
+      </div>
+    )
+  }
+}
 
 export default Layout;

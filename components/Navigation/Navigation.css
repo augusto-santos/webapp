@@ -21,7 +21,7 @@
 
 .link:hover{
   background: rgba(255,255,255,.15);
-  transition: all .3s linear;
+  transition: all .5s linear;
 }
 
 .active {

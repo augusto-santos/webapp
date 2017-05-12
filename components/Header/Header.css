@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     color: #fff;
-    background: #3f51b5;
+    background: #4D86D4;
     background-image: linear-gradient(-225deg,#3db0ef,#5e5bb7);
     z-index: 10;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07);
@@ -33,6 +33,9 @@
 .navButton:hover{
     background: rgba(255,255,255,.15);
     transition: all .3s linear;
+}
+.navButton:active{
+    background: rgba(255,255,255,.15);
 }
 
 .navigation{
@@ -70,4 +73,5 @@
 
 .menus{
     padding: 8px 0;
+    list-style: none;
 }

@@ -33,7 +33,7 @@ class Dropdown extends Component{
                 <div className={this.props.classes} onClick={this.handleDropdown} >
                     {this.props.children}
                 </div>
-                {this.state.open ? this.handleOpen() : null}
+                {this.state.open ? this.handleOpen() : null}              
             </div>  
         )
     }

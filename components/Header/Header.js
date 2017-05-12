@@ -26,7 +26,7 @@ class Header extends React.Component{
             <header className={s.wrapper}>
                 <div className={s.container}>
                     <div className={s.wrapperMenu}>
-                        <div className={s.navButton}>
+                        <div className={s.navButton} onClick={this.props.toggle}>
                             <i className="material-icons">menu</i>
                         </div>
                     </div>

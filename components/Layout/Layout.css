@@ -59,3 +59,15 @@ h1 {
   flex-direction: column;
   margin: 0 auto;
 }
+
+
+.outSidebarContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 24;
+    transition: background .8s ease-in-out;
+}
