@@ -7,8 +7,10 @@
     top: 0;
     left: -280px;
     z-index: 25;
-    transition: left .3s ease-in-out;
+    transition: left .3s cubic-bezier(0,0,0.2,1);
+    will-change: left;
     background: #fff;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
 .open{
@@ -23,6 +25,13 @@
     border-bottom: 1px solid #eee;
 }
 
+    .header h4{
+        font-family: Roboto, arial;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        line-height: 1.5px;
+    }
+
 .container{
     display: flex;
     position: relative;
@@ -32,7 +41,13 @@
     justify-content: center;
 }
 
-.item{
+.nav{
+    position: relative;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.link{
     color: #333;
     height: 42px;
     display: flex;
@@ -40,23 +55,25 @@
     width: 100%;
     padding-left: 42px;
     text-decoration: none;
-    font-size: 15px;
+    font-family: Roboto, Helvetica;
+    font-size: 14px;
     font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.4px;
     cursor: pointer;
+    border-right: 4px solid transparent;
     transition: all .3s linear;
 }
-    .item:hover{
+    .link:hover{
         background: #eee;
         transition: all .5s linear;
     }
-    .item:active{
-        background: #3e3e3e;
-        transition: all .5s linear;
+    .link:active{
+        background: #f6f6f6;
+        transition: background .5s linear;
     }
-
-
-.menus{
-    padding: 8px 0;
-    list-style: none;
-    width: 100%;
-}
+    .active{
+        background: #f6f6f6;
+        border-right: 4px solid #4D86D4;
+        transition: background .5s linear;
+    }

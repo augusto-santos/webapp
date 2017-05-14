@@ -2,12 +2,12 @@
     display: flex;
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 48px;
     top: 0;
     left: 0;
     color: #fff;
     background: #4D86D4;
-    background-image: linear-gradient(-225deg,#3db0ef,#5e5bb7);
+    /*background-image: linear-gradient(-225deg,#3db0ef,#5e5bb7);*/
     z-index: 10;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07);
 }
@@ -47,31 +47,4 @@
 
 .search{
     justify-content: flex-end;
-}
-
-.item{
-    color: #333;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    width: 256px;
-    padding-left: 42px;
-    text-decoration: none;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all .3s linear;
-}
-    .item:hover{
-        background: #eee;
-        transition: all .5s linear;
-    }
-    .item:active{
-        background: #3e3e3e;
-        transition: all .5s linear;
-    }
-
-
-.menus{
-    padding: 8px 0;
-    list-style: none;
 }

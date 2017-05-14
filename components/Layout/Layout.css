@@ -45,9 +45,9 @@ h1 {
 
 .container{
   position: absolute;
-  height: calc(100% - 50px);
+  height: calc(100% - 48px);
   width: 100%;
-  top: 50px;
+  top: 48px;
   left: 0;
   overflow: auto;
 }

@@ -23,7 +23,6 @@ class Layout extends React.Component{
   }
 
   handleSidebar(){
-    console.log('work')
     this.setState({ siderbarOpen: !this.state.siderbarOpen })
   }
 
@@ -38,13 +37,13 @@ class Layout extends React.Component{
       <div className={s.root}>
         <Header toggle={this.handleSidebar} />
         <Sidebar isOpen={this.state.siderbarOpen} />
-        <div className={s.container}>
+        <section className={s.container}>
           <div className={s.content}>
             <div className={`${s.content} ${this.props.className ? ` ${this.props.className}` : ''}`}>
               {this.props.children}
             </div>
           </div>
-        </div>
+        </section>
         {this.state.siderbarOpen ? this.outSidebar() : null}
       </div>
     )

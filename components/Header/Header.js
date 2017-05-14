@@ -1,26 +1,10 @@
 import React from 'react'
 import Nav from '../Navigation'
-import Dropdown from '../Dropdown'
+import Avatar from '../Avatar'
+import Menu from '../Menu'
 import s from './Header.css'
 
 class Header extends React.Component{
-
-    constructor(props){
-        super(props)
-
-        this.dropdownList = this.dropdownList.bind(this)
-    }
-
-    dropdownList(){
-        return(
-            <ul className={s.menus}>
-                <li><a href="#" className={s.item}>Teste</a></li>
-                <li><a href="#" className={s.item}>Menu</a></li>
-                <li><a href="#" className={s.item}>Dropdown</a></li>
-            </ul>
-        )
-    }
-
     render(){
         return(
             <header className={s.wrapper}>
@@ -38,12 +22,13 @@ class Header extends React.Component{
                             <i className="material-icons">search</i>
                         </div>
                     </div>
-                    <Dropdown classes={s.navButton} open={this.dropdownList()} >
+                    <Menu classes={s.navButton}>
                         <i className="material-icons">more_vert</i>
-                    </Dropdown>
+                    </Menu>
                     <div className={s.avatar}>
                         <div className={s.navButton}>
-
+                            <Avatar user="Argus" 
+                                src="https://lh3.googleusercontent.com/-8pMVVGd_jYw/AAAAAAAAAAI/AAAAAAAAA4w/Qn3TPGcQ25A/photo.jpg?sz=64" />
                         </div>
                     </div>
                 </div>

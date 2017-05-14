@@ -12,6 +12,22 @@
   </head>
   <body>
     <div id="root"></div>
-    <script src="/dist/main.js?b33d9dbea6532eb8906c"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDLX6hvAcQcCPoxd-3H9MU6CyA_OUj1p4Q",
+        authDomain: "sekaiproject-f36cd.firebaseapp.com",
+        databaseURL: "https://sekaiproject-f36cd.firebaseio.com",                                                                                                                                                                     
+        projectId: "sekaiproject-f36cd",
+        storageBucket: "sekaiproject-f36cd.appspot.com",
+        messagingSenderId: "1088270108517"
+      };                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+      firebase.initializeApp(config);
+
+      var database = firebase.database();
+    </script>
+    <script src="/dist/main.js?dea7ce6d9080b3c232a7"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Navigation from './Navigations'
 import s from './Sidebar.css'
 
 class Sidebar extends Component{
@@ -10,11 +11,7 @@ class Sidebar extends Component{
                     <h4>Menu</h4>
                 </div>
                 <div className={s.container}>
-                    <ul className={s.menus}>
-                        <li className={s.item}>Teste</li>
-                        <li className={s.item}>Sidebar</li>
-                        <li className={s.item}>Component</li>
-                    </ul>
+                    <Navigation />
                 </div>
             </aside>
         )
