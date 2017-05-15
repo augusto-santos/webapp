@@ -1,4 +1,4 @@
-.menus{
+.menu{
     position: relative;    
 }
 
@@ -8,7 +8,7 @@
     transform-origin: top right 0px;
     transform: scale(0);
     top: 48px;
-    right: 12px;
+    right: 0;
     opacity: 0;
     border-radius: 2px;
     white-space: nowrap;

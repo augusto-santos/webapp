@@ -65,6 +65,9 @@ class Menu extends Component{
                             style={this.handleItemDelay(1)} >Teste</a></li>
                         <li><a href="#" className={`${s.item} ${s.itemAnim}`} 
                             style={this.handleItemDelay(2)} >Menu</a></li>
+                        <li>
+                            <a href="#" className={`${s.item} ${s.itemAnim}`} style={this.handleItemDelay(3)} >Get Starting</a>
+                        </li>
                     </ul> 
                 </div>           
             </div>  
