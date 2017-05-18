@@ -11,8 +11,9 @@
   align-items: center;
   padding: 0 20px;
   border-bottom: 2px solid transparent;
-  color: #e9e9e9;
-  will-change: color, border-bottom-color, background;
+  color: #fff;
+  opacity: 0.85;
+  will-change: opacity, border-bottom-color, background;
   font-family: 'Helvetica';
   font-size: 15px;
   text-decoration: none;
@@ -26,8 +27,8 @@
 }
 
 .active {
-  color: #fff;
+  opacity: 1;
   border-bottom-color: #fff;
   background: rgba(255,255,255,.15);
-  transition: color, border-bottom-color, background .3s linear;
+  transition: opacity, border-bottom-color, background .3s linear;
 }

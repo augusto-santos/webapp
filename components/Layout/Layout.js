@@ -1,12 +1,3 @@
-/**
- * React App SDK (https://github.com/kriasoft/react-app)
- *
- * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 import React, { PropTypes } from 'react';
 import Header from '../Header';
 import Sidebar from '../Sidebar'
@@ -16,7 +7,7 @@ class Layout extends React.Component{
 
   constructor(props){
     super(props)
-    this.state = { siderbarOpen: false }
+    this.state = { siderbarOpen: true }
 
     this.handleSidebar = this.handleSidebar.bind(this)
     this.outSidebar = this.outSidebar.bind(this)
@@ -33,21 +24,23 @@ class Layout extends React.Component{
   }
 
   render(){
+    const styleClass = this.state.siderbarOpen ? `${s.container} ${s.isOpen}` : `${s.container}`
     return (
       <div className={s.root}>
-        <Header toggle={this.handleSidebar} />
+        <Header toggle={this.handleSidebar} isOpen={this.state.siderbarOpen} />
         <Sidebar isOpen={this.state.siderbarOpen} />
-        <section className={s.container}>
+        <section className={styleClass} >
           <div className={s.content}>
             <div className={`${s.content} ${this.props.className ? ` ${this.props.className}` : ''}`}>
               {this.props.children}
             </div>
           </div>
         </section>
-        {this.state.siderbarOpen ? this.outSidebar() : null}
       </div>
     )
   }
 }
 
 export default Layout;
+
+/* {this.state.siderbarOpen ? this.outSidebar() : null} */

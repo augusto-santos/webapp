@@ -5,7 +5,7 @@
 .Open{
     display: inline-block;
     position: absolute;
-    transform-origin: top right 0px;
+    transform-origin: top;
     transform: scale(0);
     top: 48px;
     right: 0;
@@ -14,7 +14,7 @@
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;
-    transition: opacity, transform .5s cubic-bezier(0,0,0.2,1);
+    transition: opacity, transform .3s cubic-bezier(0,0,0.2,1);
     will-change: transform, opacity;
     word-wrap: break-word;
     box-sizing: border-box;

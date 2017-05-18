@@ -50,6 +50,15 @@ h1 {
   top: 48px;
   left: 0;
   overflow: auto;
+  will-change: width, left;
+  transform-origin: right;
+  transition: left .3s ease, padding-left .6s ease;
+}
+
+.isOpen{
+  width: calc(100% - 255px);
+  left: 255px;
+  padding-left: 10px;
 }
 
 .content {

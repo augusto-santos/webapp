@@ -1,8 +1,6 @@
 export const styleOn = { 
     opacity: 1,
-    transform: 'scale(1,1)',
-    transformOrigin: 'top',
-    transition: 'opacity 0.3s cubic-bezier(0,0,0.2,1), transform 0.3s cubic-bezier(0,0,0.2,1)'
+    transform: 'scale(1,1)'
 }
 
 export const styleOff = {

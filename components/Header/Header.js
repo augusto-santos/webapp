@@ -1,26 +1,26 @@
 import React from 'react'
-import Nav from '../Navigation'
 import Avatar from '../Avatar'
 import Menu from '../Menu'
+import Search from '../Search'
 import s from './Header.css'
 
 class Header extends React.Component{
     render(){
+        const title = document.title
+        const styleClass = this.props.isOpen ? `${s.wrapper} ${s.isOpen}` : `${s.wrapper}`
         return(
-            <header className={s.wrapper}>
+            <header className={styleClass}>
                 <div className={s.container}>
                     <div className={s.wrapperMenu}>
                         <div className={s.navButton} onClick={this.props.toggle}>
                             <i className="material-icons">menu</i>
                         </div>
                     </div>
-                    <div className={s.navigation}>
-                        <Nav />
+                    <div className={s.title}>
+                        <p>{title}</p>
                     </div>
                     <div className={s.search}>
-                        <div className={s.navButton}>
-                            <i className="material-icons">search</i>
-                        </div>
+                        <Search />
                     </div>
                     <Menu classes={s.navButton}>
                         <i className="material-icons">more_vert</i>
