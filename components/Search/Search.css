@@ -31,7 +31,7 @@
     will-change: background;
     transition: background .3s linear;
 }
-.expanded input:focus{
+.expanded input:focus, .expanded input:hover{
     background: #FFF;
 }
 

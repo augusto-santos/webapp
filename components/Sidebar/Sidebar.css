@@ -1,3 +1,5 @@
+@import '../variable.css';
+
 .sidebar{
     display: flex;
     position: absolute;
@@ -74,6 +76,6 @@
     }
     .active{
         background: #f6f6f6;
-        border-right: 4px solid #4D86D4;
+        border-right: 4px solid var(--color-primary);
         transition: background .5s linear;
     }

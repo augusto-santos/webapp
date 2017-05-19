@@ -1,3 +1,4 @@
+@import '../variable.css';
 .wrapper{
     display: flex;
     position: fixed;
@@ -6,7 +7,7 @@
     top: 0;
     left: 0;
     color: #fff;
-    background: #4D86D4;
+    background: var(--color-primary);
     /*background-image: linear-gradient(-225deg,#3db0ef,#5e5bb7);*/
     z-index: 10;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07);

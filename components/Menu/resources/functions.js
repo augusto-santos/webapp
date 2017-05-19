@@ -19,6 +19,6 @@ export function delayItem(index){
     return style
 }
 
-export function delayTransition(transitionDuration, index){
+function delayTransition(transitionDuration, index){
     return ((((transitionDuration / 2 ) + index / 10) / 2))
 }

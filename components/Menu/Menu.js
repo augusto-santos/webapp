@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { styleOn, styleOff, delayItem } from './foundations'
+import { styleOn, styleOff, delayItem } from './resources/functions'
+import ItemLink from '../Link'
 import s from './Menu.css'
 
 class Menu extends Component{
@@ -56,18 +57,20 @@ class Menu extends Component{
     render(){
         return(
             <div className={s.menu} >
-                <div className={this.props.classes} onClick={this.handleMenu} >
+                <div className={this.props.className} onClick={this.handleMenu} >
                     {this.props.children}
                 </div>
                 <div className={s.Open} style={this.handleOpen()} ref={this.wrapperOpen} >
                     <ul className={s.menus}>
-                        <li><a href="#" className={`${s.item} ${s.itemAnim}`} 
-                            style={this.handleItemDelay(1)} >Teste</a></li>
-                        <li><a href="#" className={`${s.item} ${s.itemAnim}`} 
-                            style={this.handleItemDelay(2)} >Menu</a></li>
-                        <li>
-                            <a href="#" className={`${s.item} ${s.itemAnim}`} style={this.handleItemDelay(3)} >Get Starting</a>
-                        </li>
+                        {this.props.List.map((items) => {
+                            return(
+                                <li className={`${s.itemList}`} style={this.handleItemDelay(items.id)}>
+                                    <ItemLink key={items.id} to={items.link} className={`${s.item} ${s.itemAnim}`} >
+                                        {items.item}
+                                    </ItemLink>
+                                </li>
+                            )
+                        })}
                     </ul> 
                 </div>           
             </div>  
