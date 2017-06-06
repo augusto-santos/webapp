@@ -19,5 +19,9 @@
   {
     "path": "/tasks/:status(pending|completed)?",
     "component": "./routes/Home"
+  },
+  {
+    "path": "/content",
+    "component": "./routes/Content"
   }
 ]

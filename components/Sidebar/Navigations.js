@@ -11,6 +11,7 @@ class Navigations extends Component{
             <nav className={s.nav} >
                 <Link className={linkClass('/')} to="/" >Home</Link>
                 <Link className={linkClass('/get-started')} to="/get-started">Get Started</Link>
+                <Link className={linkClass('/content')} to="/content">Content</Link>
             </nav>
         )
     }
