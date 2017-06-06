@@ -14,7 +14,7 @@ export function delayItem(index){
     const style ={
         opacity: 1,
         transform: `scale(1,1)`,
-        transition: ` opacity 0.3s cubic-bezier(0,0,0.2,1) ${delay}s, transform 0.1s cubic-bezier(0,0,0.2,1) ${delay}s`
+        transition: ` opacity 0.3s cubic-bezier(0,0,0.2,1) ${delay}s`
     }
     return style
 }

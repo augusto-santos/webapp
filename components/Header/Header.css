@@ -1,4 +1,5 @@
 @import '../variable.css';
+
 .wrapper{
     display: flex;
     position: fixed;
