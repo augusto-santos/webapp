@@ -1,0 +1,21 @@
+@import '../variable.css';
+
+.wrapper_card{
+    display: flex;
+    height: 250px;
+    width: 300px;
+    flex-direction: column;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: var(--shadow-root);
+}
+
+.card_img{
+  height: 150px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}

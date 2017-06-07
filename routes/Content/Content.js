@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Layout from '../../components/Layout'
+import Card from '../../components/Card'
 import s from './Content.css'
 
 const title = 'Conteudo Personalizado'
@@ -13,7 +14,7 @@ class Content extends Component{
   render(){
     return(
       <Layout className={s.content}>
-        <h3>Contéudo</h3>
+        <Card img="http://gameranx.com/wp-content/uploads/2016/03/Firewatch-4K-Wallpaper-1.jpg" />
       </Layout>
     )
   }
