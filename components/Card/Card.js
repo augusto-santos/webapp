@@ -7,12 +7,8 @@ class Card extends Component{
             <div className={`${s.wrapper}`}>
                 <div className={`${s.bg}`} style={{ backgroundImage: `url(${this.props.img})`}} ></div>
                 <div className={`${s.info}`}>
-                    <div className={`${s.data}`} >07/06/2017</div>
-                    <div className={`${s.title}`}>Teste</div>
-                    <div className={`${s.description}`} ></div>
-                </div>
-                <div className={`${s.action}`}>
-                    <a href="#" className={`${s.more}`}>Var Mais</a>
+                    <div className={`${s.data}`} >{this.props.data}</div>
+                    <div className={`${s.title}`}>{this.props.title}</div>
                 </div>
             </div>
         )

@@ -1,0 +1,7 @@
+{
+    "Teste": [
+        {"key": 1, "class": "/", "to": "/", "title": "Home"},
+        {"key": 2, "class": "/get-started", "to": "/get-started", "title": "Get Started"},
+        {"key": 3, "class": "/content", "to": "/content", "title": "Conteudo"}
+    ]
+}

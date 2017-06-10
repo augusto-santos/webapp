@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Layout from '../../components/Layout'
+import Grid from '../../components/Grid'
 import Card from '../../components/Card'
 import s from './Content.css'
+import teste from './teste.json'
 
 const title = 'Conteudo Personalizado'
 
@@ -13,8 +15,18 @@ class Content extends Component{
 
   render(){
     return(
-      <Layout className={s.content}>
-        <Card img="http://gameranx.com/wp-content/uploads/2016/03/Firewatch-4K-Wallpaper-1.jpg" />
+      <Layout>
+        <div className={`${s.conteudo}`}>
+          <div className="row">
+            {teste.Tester.map((items) => {
+              return(
+                <Grid cols="12 6 4" key={items.id}>
+                  <Card img={items.bg} title={items.title} data={items.Atcreated} />
+                </Grid>
+              )
+            })}
+          </div>
+        </div>
       </Layout>
     )
   }

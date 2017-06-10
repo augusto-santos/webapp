@@ -3,8 +3,9 @@
 .wrapper{
     display: flex;
     height: 250px;
-    width: 300px;
+    width: 100%;
     flex-direction: column;
+    cursor: pointer;
     margin-top: 10px;
     border-radius: 2px;
     background: #fff;
@@ -12,7 +13,7 @@
 }
 
 .wrapper .bg{
-  height: 150px;
+  height: 190px;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -22,7 +23,7 @@
 
 .wrapper .info{
   display: flex;
-  height: 65px;
+  height: 60px;
   width: 100%;
   padding: 0 16px;
   flex-direction: column;
@@ -38,27 +39,4 @@
 
 .wrapper .info .title{
   font-size: 16px;
-}
-
-.wrapper .action{
-  height: 35px;
-  width: 100%;
-}
-
-.wrapper .action .more{
-  display: flex;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 14px;
-  color: #333;
-  background: #fff;
-  will-change: background;
-  transition: background .3s ease;
-}
-
-.wrapper .action .more:hover{
-  background: #eee;
 }

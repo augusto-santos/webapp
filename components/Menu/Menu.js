@@ -64,8 +64,8 @@ class Menu extends Component{
                     <ul className={s.menus}>
                         {this.props.List.map((items) => {
                             return(
-                                <li className={`${s.itemList}`} style={this.handleItemDelay(items.id)}>
-                                    <ItemLink key={items.id} to={items.link} className={`${s.item} ${s.itemAnim}`} >
+                                <li className={`${s.itemList}`} key={items.id} style={this.handleItemDelay(items.id)}>
+                                    <ItemLink to={items.link} className={`${s.item} ${s.itemAnim}`} >
                                         {items.item}
                                     </ItemLink>
                                 </li>

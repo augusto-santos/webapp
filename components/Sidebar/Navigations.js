@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import history from '../../core/history'
 import Link from '../Link'
+import NavTeste from '../../test/SidebarNavigation.json'
 import s from './Sidebar.css'
 
 class Navigations extends Component{
@@ -9,9 +10,11 @@ class Navigations extends Component{
         const linkClass = href => `${s.link}${path === href ? ` ${s.active} ` : ''}`
         return(
             <nav className={s.nav} >
-                <Link className={linkClass('/')} to="/" >Home</Link>
-                <Link className={linkClass('/get-started')} to="/get-started">Get Started</Link>
-                <Link className={linkClass('/content')} to="/content">Content</Link>
+                {NavTeste.Teste.map((items) => {
+                    return(
+                        <Link key={items.key} className={linkClass(`${items.class}`)} to={items.to}>{items.title}</Link>
+                    )
+                })}
             </nav>
         )
     }

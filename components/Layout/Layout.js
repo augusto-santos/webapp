@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import Header from '../Header';
 import Sidebar from '../Sidebar'
-import s from './Layout.css';
+import s from './Layout.css'
 
 class Layout extends React.Component{
 
@@ -31,7 +31,7 @@ class Layout extends React.Component{
         <Sidebar isOpen={this.state.siderbarOpen} />
         <section className={styleClass} >
           <div className={s.content}>
-            <div className={`${s.content} ${this.props.className ? ` ${this.props.className}` : ''}`}>
+            <div className={`${this.props.className ? ` ${this.props.className}` : ''}`}>
               {this.props.children}
             </div>
           </div>

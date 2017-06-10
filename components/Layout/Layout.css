@@ -59,9 +59,8 @@ h1 {
 }
 
 .isOpen{
-  width: calc(100% - 255px);
-  left: 255px;
-  padding-left: 10px;
+  width: calc(100% - 230px);
+  left: 230px;
 }
 
 .content {
@@ -70,6 +69,7 @@ h1 {
   max-width: var(--screen-md-min);
   flex-direction: column;
   margin: 0 auto;
+  padding: 15px;
 }
 
 

@@ -8,7 +8,7 @@ class Sidebar extends Component{
         return(
             <aside className={sidebarClass} >
                 <div className={s.header} >
-                    <h4>Navigation</h4>
+                    <h4>Navegação</h4>
                 </div>
                 <div className={s.container}>
                     <Navigation />

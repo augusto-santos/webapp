@@ -1,0 +1,11 @@
+.subheader{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    top: 48px;
+    left: 230px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    z-index: 9;
+}

@@ -2,18 +2,13 @@ import React from 'react'
 import Avatar from '../Avatar'
 import Menu from '../Menu'
 import Search from '../Search'
+import ListTeste from '../../test/MenuList.json'
+import UserTeste from '../../test/MenuUser.json'
 import s from './Header.css'
 
-const ListMenu = [
-    {'id': 1, 'item': 'Teste', 'link': '#'},
-    {'id': 2, 'item': 'Menu', 'link': '/get-started'},
-    {'id': 3, 'item': 'Logout', 'link': '/error'}
-]
+const ListMenu = ListTeste.Teste;
 
-const UserList = [
-    {'id': 1, 'item': 'Perfil', 'link': '#'},
-    {'id': 2, 'item': 'Sair', 'link': '#'}
-]
+const UserList = UserTeste.Teste;
 
 class Header extends React.Component{
     render(){
@@ -33,10 +28,10 @@ class Header extends React.Component{
                     <div className={s.search}>
                         <Search />
                     </div>
-                    <Menu key={2} List={ListMenu} className={s.navButton}>
+                    <Menu List={ListMenu} className={s.navButton}>
                         <i className="material-icons">more_vert</i>
                     </Menu>
-                    <Menu key={1} List={UserList} className={s.navButton}>
+                    <Menu List={UserList} className={s.navButton}>
                         <Avatar user="Argus" 
                             src="https://lh3.googleusercontent.com/-8pMVVGd_jYw/AAAAAAAAAAI/AAAAAAAAA4w/Qn3TPGcQ25A/photo.jpg?sz=64" />
                     </Menu>
