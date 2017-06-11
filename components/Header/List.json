@@ -1,7 +1,0 @@
-{
-    "ListItems": [
-        {"id": 1, "item": "Teste", "link": "#"},
-        {"id": 2, "item": "Menu", "link": "/get-started"},
-        {"id": 3, "item": "Logout", "link": "/error"}
-    ] 
-}

@@ -6,10 +6,6 @@ import ListTeste from '../../test/MenuList.json'
 import UserTeste from '../../test/MenuUser.json'
 import s from './Header.css'
 
-const ListMenu = ListTeste.Teste;
-
-const UserList = UserTeste.Teste;
-
 class Header extends React.Component{
     render(){
         const title = document.title
@@ -28,12 +24,12 @@ class Header extends React.Component{
                     <div className={s.search}>
                         <Search />
                     </div>
-                    <Menu List={ListMenu} className={s.navButton}>
+                    <Menu List={ListTeste} className={s.navButton}>
                         <i className="material-icons">more_vert</i>
                     </Menu>
-                    <Menu List={UserList} className={s.navButton}>
+                    <Menu List={UserTeste} className={s.navButton}>
                         <Avatar user="Argus" 
-                            src="https://lh3.googleusercontent.com/-8pMVVGd_jYw/AAAAAAAAAAI/AAAAAAAAA4w/Qn3TPGcQ25A/photo.jpg?sz=64" />
+                            src="/img/user.jpg" />
                     </Menu>
                 </div>
             </header>

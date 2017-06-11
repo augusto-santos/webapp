@@ -10,7 +10,7 @@ class Navigations extends Component{
         const linkClass = href => `${s.link}${path === href ? ` ${s.active} ` : ''}`
         return(
             <nav className={s.nav} >
-                {NavTeste.Teste.map((items) => {
+                {NavTeste.map((items) => {
                     return(
                         <Link key={items.key} className={linkClass(`${items.class}`)} to={items.to}>{items.title}</Link>
                     )

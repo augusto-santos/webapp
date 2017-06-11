@@ -53,6 +53,7 @@ h1 {
   top: 48px;
   left: 0;
   overflow: auto;
+  background: #fffffa;
   will-change: width, left;
   transform-origin: right;
   transition: left .3s ease, padding-left .6s ease;

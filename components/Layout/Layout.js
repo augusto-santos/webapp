@@ -30,7 +30,7 @@ class Layout extends React.Component{
         <Header toggle={this.handleSidebar} isOpen={this.state.siderbarOpen} />
         <Sidebar isOpen={this.state.siderbarOpen} />
         <section className={styleClass} >
-          <div className={s.content}>
+          <div className={`${s.content}`}>
             <div className={`${this.props.className ? ` ${this.props.className}` : ''}`}>
               {this.props.children}
             </div>

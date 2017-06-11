@@ -1,0 +1,33 @@
+@import '../variable.css';
+
+.btn{
+    display: flex;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0 18px;
+    margin: 0 5px;
+    border-radius: 1px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    background: transparent;
+    will-change: background;
+    transition: background, color .3s ease;
+}
+
+.btn:hover{
+    background: #eee;
+    color: #333;
+}
+
+.primary{
+    color: #fcfafa;
+    background: var(--color-primary);
+}
+
+.primary:hover{
+    background: #335D96;
+}

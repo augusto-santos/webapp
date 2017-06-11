@@ -2,7 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux';
 
 import s from './App.css'
-import Logo from '../public/dist/img/html-5.svg'
+import Logo from '../public/img/html-5.svg'
 
 class App extends React.Component{
     constructor(props){

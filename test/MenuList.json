@@ -1,7 +1,5 @@
-{
-    "Teste": [
-        {"id": 1, "item": "Definições", "link": "#"},
-        {"id": 2, "item": "Denuncias", "link": "/get-started"},
-        {"id": 3, "item": "Sobre", "link": "/error"}
-    ]
-}
+[
+    {"id": 1, "item": "Configurações", "link": "#"},
+    {"id": 2, "item": "Denuncias", "link": "/get-started"},
+    {"id": 3, "item": "Sobre", "link": "/error"}
+]

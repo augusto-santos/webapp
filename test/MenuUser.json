@@ -1,6 +1,5 @@
-{
-    "Teste": [
-        {"id": 1, "item": "Ver Perfil", "link": "#"},
-        {"id": 2, "item": "Logout", "link": "#"}
-    ]
-}
+[
+    {"id": 1, "item": "Ver Perfil", "link": "#"},
+    {"id": 2, "item": "Definições de Conta", "link": "#"},
+    {"id": 3, "item": "Logout", "link": "#"}
+]

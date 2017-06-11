@@ -3,7 +3,7 @@ import Layout from '../../components/Layout'
 import Grid from '../../components/Grid'
 import Card from '../../components/Card'
 import s from './Content.css'
-import teste from './teste.json'
+import Teste from '../../test/ContentTeste.json'
 
 const title = 'Conteudo Personalizado'
 
@@ -18,10 +18,10 @@ class Content extends Component{
       <Layout>
         <div className={`${s.conteudo}`}>
           <div className="row">
-            {teste.Tester.map((items) => {
+            {Teste.map((items) => {
               return(
-                <Grid cols="12 6 4" key={items.id}>
-                  <Card img={items.bg} title={items.title} data={items.Atcreated} />
+                <Grid cols="12 6 4" key={items.key}>
+                  <Card img={items.bg} title={items.title} data={items.date} />
                 </Grid>
               )
             })}

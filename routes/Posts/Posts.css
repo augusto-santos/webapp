@@ -1,0 +1,261 @@
+@import '../../components/variable.css';
+
+.posts{
+    width: 100%;
+    padding: 0 15px;
+}
+
+.posts .header{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+}
+
+.posts .header .publisher{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.posts .header .publisher .avatar{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    margin-right: 10px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.posts .header .publisher .avatar img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.posts .header .publisher h4{
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+.posts .header .actions{
+    display: flex;
+    height: 100%;
+    width: 450px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.posts .body{
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.posts .body .title{
+    font-size: 32px;
+    font-weight: 400;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.posts .body .info{
+    display: flex;
+    height: 25px;
+    width: 100%;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.posts .body .info .date, .posts .body .info .viewrs, .posts .body .info .comment{
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    color: #444;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.icon{
+    font-size: 16px;
+    color: #444;
+    margin-right: 3px;
+}
+
+.posts .body .tags{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.posts .body .tags .tag{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    background: #eee;
+    border-radius: 1px;
+    margin-right: 5px;
+    padding: 0 10px;
+}
+
+.posts .conteudo{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #222;
+    padding: 15px;
+    flex-direction: column;
+}
+
+.posts .conteudo p{
+    margin-bottom: 5px;
+}
+
+.posts .conteudo .block{
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    padding: 15px 30px;
+    background: #eee;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #455;
+    margin: 15px 0;
+}
+
+.posts .conteudo .blockTitle{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.posts .conteudo .blockSubtitle{
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+/*
+ * Commentary
+ *===========================*/
+
+.commentary{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.commentary h3{
+    font-size: 28px;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.commentary .writer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.commentary .writer .textArea{
+    width: 100%;
+    max-width: 650px;
+    height: 180px;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    background: #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    will-change: background;
+    transition: background .3s ease;
+}
+
+.commentary .writer .textArea:focus, .commentary .writer .textArea:active{
+    background: #fcfafa;
+}
+
+.commentary .comments{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.commentary .comentario{
+    display: flex;
+    width: 100%;
+    max-width: 650px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.comentario .person{
+    display: flex;
+    width: 60px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.comentario .person img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.comentario .commentContent{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.comentario .commentContent .info{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.comentario .commentContent .info .name{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding-right: 10px;
+}
+
+.comentario .commentContent .info .date{
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+}
+
+.comentario .commentContent .bodyContent{
+    width: 100%;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
