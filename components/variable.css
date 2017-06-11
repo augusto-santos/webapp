@@ -20,3 +20,12 @@
   --screen-md-min: 992px;  /* Medium screen / desktop */
   --screen-lg-min: 1200px; /* Large screen / wide desktop */
 }
+
+.wrapperContainer{
+  display: flex;
+  width: 100%;
+  max-width: var(--screen-md-min);
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 15px 30px;
+}

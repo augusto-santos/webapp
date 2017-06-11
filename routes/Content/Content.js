@@ -17,16 +17,18 @@ class Content extends Component{
     return(
       <Layout>
         <div className={`${s.conteudo}`}>
-          <div className="row">
-            {Teste.map((items) => {
-              return(
-                <Grid cols="12 6 4" key={items.key}>
-                  <Card img={items.bg} title={items.title} data={items.date} />
-                </Grid>
-              )
-            })}
+          <div className={`${s.wrapperContainer}`}>
+            <div className="row">
+              {Teste.map((items) => {
+                return(
+                  <Grid cols="12 6 4" key={items.key}>
+                    <Card img={items.bg} title={items.title} data={items.date} />
+                  </Grid>
+                )
+              })}
+            </div>
           </div>
-        </div>
+          </div>
       </Layout>
     )
   }
