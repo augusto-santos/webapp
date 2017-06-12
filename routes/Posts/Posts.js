@@ -44,10 +44,7 @@ class Posts extends Component{
                             <div dangerouslySetInnerHTML={{ __html: html }} />
                         </Post>
                         <div className={`${s.conteudoFooter}`}>
-                            <UserPost avatar={userAvatar} alt={user} userName={user} />
-                            <div className={`${s.actionsFooter}`}>
-                                <Button label={<i className="material-icons">more_vert</i>} />
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

@@ -5,6 +5,7 @@ title: Testando ReactJS Component Post
 atCreated: 25/05/2017
 viewrs: 15
 comment: 25
+tags: ReactJS, ES2015, JavaScript
 ---
 
 ## Introdução
