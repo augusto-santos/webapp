@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { styleOn, styleOff, delayItem } from './resources/functions'
+import { styleOn, styleOff, delayItem, handleKeymapItem } from './resources/functions'
 import ItemLink from '../Link'
 import s from './Menu.css'
 
@@ -14,6 +14,7 @@ class Menu extends Component{
         this.handleOpen = this.handleOpen.bind(this)
         this.handleClose = this.handleClose.bind(this)
         this.handleItemDelay = this.handleItemDelay.bind(this)
+        this.handleIconItem = this.handleIconItem.bind(this)
     }
 
     componentDidMount() {
@@ -46,12 +47,26 @@ class Menu extends Component{
         }
     }
 
+    
+
     handleClose(event){
         const domNode = ReactDOM.findDOMNode(this)
 
         if((!domNode || !domNode.contains(event.target))){
             this.setState({ open: false })
         }
+    }
+
+    handleKeymapItem(index){
+        return(
+            <p className={`${s.keymapItem}`}>{index}</p>
+        )
+    }
+
+    handleIconItem(index){
+        return (
+            <i className={`material-icons ${s.iconItem}`}>{index}</i>
+        )
     }
 
     render(){
@@ -66,7 +81,11 @@ class Menu extends Component{
                             return(
                                 <li className={`${s.itemList}`} key={items.id} style={this.handleItemDelay(items.id)}>
                                     <ItemLink to={items.link} className={`${s.item} ${s.itemAnim}`} >
-                                        {items.item}
+                                        <div className={`${s.colIcon}`}>
+                                            {items.icon ? this.handleIconItem(items.icon) : null}
+                                        </div>
+                                        <p className={`${s.itemLabel}`}>{items.item}</p> 
+                                        {items.keymap ? this.handleKeymapItem(items.keymap) : null}
                                     </ItemLink>
                                 </li>
                             )

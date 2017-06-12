@@ -5,7 +5,9 @@ class Footer extends Component{
     render(){
         return(
             <div className={`${s.wrapperFooter}`}>
-                <div className={`${s.wrapperContainer}`}></div>
+                <div className={`${s.wrapperContainer}`}>
+
+                </div>
             </div>
         )
     }

@@ -1,5 +1,5 @@
 [
-    {"id": 1, "item": "Configurações", "link": "#"},
+    {"id": 1, "item": "Configurações", "link": "#", "icon": "settings", "keymap": "Ctrl + Shift + P"},
     {"id": 2, "item": "Denuncias", "link": "/get-started"},
     {"id": 3, "item": "Sobre", "link": "/error"}
 ]

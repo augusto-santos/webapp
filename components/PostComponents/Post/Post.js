@@ -8,7 +8,7 @@ class Post extends Component{
                 <div className={`${s.title}`}>{this.props.titlePost}</div>
                 <div className={`${s.info}`}>
                     <div className={`${s.date}`}>Postado em {this.props.atCreated}</div>
-                    <div className={`${s.viewrs}`}><i className={`material-icons ${s.icon}`}>remove_red_eye</i>{this.props.viewrs}</div>
+                    <div className={`${s.viewrs}`}><i className={`material-icons ${s.icon}`}>visibility</i>{this.props.viewrs}</div>
                     <div className={`${s.comment}`}><i className={`material-icons ${s.icon}`}>forum</i>{this.props.comments}</div>
                 </div>
                 <ul className={`${s.tags}`}>
