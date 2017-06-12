@@ -1,0 +1,31 @@
+@import '../../variable.css';
+
+.wrapperBanner{
+    display: flex;
+    width: 100%;
+    height: 260px;
+    background: var(--color-primary);
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.contentBanner{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fcfafb;
+}
+
+.contentBanner h3{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.contentBanner p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #eee;
+}

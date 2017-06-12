@@ -1,0 +1,106 @@
+.wrapperPost{
+    width: 100%;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: 400;
+    color: #222;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.info{
+    display: flex;
+    height: 25px;
+    width: 100%;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.info .date, .info .viewrs, .info .comment{
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    color: #444;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.icon{
+    font-size: 16px;
+    color: #444;
+    margin-right: 3px;
+}
+
+.tags{
+    display: flex;
+    height: 30px;
+    width: 100%;
+    list-style: none;
+    padding: 0 10px;
+    align-items: center;
+}
+
+.tags .tag{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    background: #eee;
+    border-radius: 1px;
+    margin-right: 5px;
+    padding: 0 10px;
+}
+
+.contentPost{
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+    color: #222;
+    padding: 15px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.contentPost pre{
+    width: 100%;
+    max-width: 850px;
+    background: #eee;
+    border-radius: 2px;
+    padding: 20px 10px;
+    margin: 15px auto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #444;
+}
+
+.contentPost h1{
+     color: #111;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.contentPost h2{
+    color: #222;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.contentPost h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.contentPost p{
+    color: #333;
+    margin-bottom: 5px;
+}

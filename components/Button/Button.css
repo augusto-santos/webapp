@@ -2,11 +2,11 @@
 
 .btn{
     display: flex;
-    height: 28px;
+    height: 30px;
     align-items: center;
     justify-content: center;
     border: none;
-    padding: 0 18px;
+    padding: 0 16px;
     margin: 0 5px;
     border-radius: 1px;
     font-size: 12px;
@@ -14,8 +14,9 @@
     color: #666;
     cursor: pointer;
     background: transparent;
+    box-shadow: none;
     will-change: background;
-    transition: background, color .3s ease;
+    transition: background, color .3s ease-in-out;
 }
 
 .btn:hover{
@@ -23,11 +24,26 @@
     color: #333;
 }
 
+/*
+ * Primary Styles
+ =================*/
+
 .primary{
     color: #fcfafa;
     background: var(--color-primary);
+    transition: box-shadow .3s ease;
 }
 
 .primary:hover{
-    background: #335D96;
+    color: #fff;
+    background: rgba(77, 134, 212, .9);
+}
+
+/**
+ * btn Icons
+ */
+
+.btn i[class=material-icons]{
+    font-size: 16px !important;
+    margin: 0 5px !important;
 }

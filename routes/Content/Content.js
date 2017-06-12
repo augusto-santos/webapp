@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Layout from '../../components/Layout'
+import Footer from '../../components/Footer'
 import Grid from '../../components/Grid'
 import Card from '../../components/Card'
 import s from './Content.css'
@@ -29,6 +30,7 @@ class Content extends Component{
             </div>
           </div>
           </div>
+          <Footer></Footer>
       </Layout>
     )
   }

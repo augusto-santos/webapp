@@ -1,12 +1,13 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import s from './GetStarted.css';
-import { title, html } from './GetStarted.md';
+import React from 'react'
+import Layout from '../../components/Layout'
+import Footer from '../../components/Footer'
+import s from './GetStarted.css'
+import { title, html } from './GetStarted.md'
 
 class AboutPage extends React.Component {
 
   componentDidMount() {
-    document.title = title;
+    document.title = title
   }
 
   render() {
@@ -16,10 +17,11 @@ class AboutPage extends React.Component {
           <h1>{title}</h1>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
+        <Footer></Footer>
       </Layout>
     );
   }
 
 }
 
-export default AboutPage;
+export default AboutPage
