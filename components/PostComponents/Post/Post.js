@@ -12,9 +12,11 @@ class Post extends Component{
                     <div className={`${s.comment}`}><i className={`material-icons ${s.icon}`}>forum</i>{this.props.comments}</div>
                 </div>
                 <ul className={`${s.tags}`}>
-                    <li className={`${s.tag}`}>ReactJS</li>
-                    <li className={`${s.tag}`}>ES2015</li>
-                    <li className={`${s.tag}`}>JavaScript</li>
+                    {this.props.tag.map((tags) => {
+                        return(
+                            <li className={`${s.tag}`}>{tags}</li>
+                        )
+                    })}
                 </ul>
                 <div className={`${s.contentPost}`}>
                     {this.props.children}

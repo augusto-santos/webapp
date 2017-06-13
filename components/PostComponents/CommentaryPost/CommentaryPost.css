@@ -1,0 +1,58 @@
+@import '../../variable.css';
+
+.wrapperCommentary{
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.wrapperCommentary .userCommentary{
+    display: flex;
+    width: 60px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapperCommentary .userCommentary img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.wrapperCommentary .commentaryContent{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.wrapperCommentary .commentaryContent .infoComment{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.wrapperCommentary .commentaryContent .infoComment .nameUser{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-primary);
+    padding-right: 10px;
+}
+
+.wrapperCommentary .commentaryContent .infoComment .dateCommented{
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+}
+
+.wrapperCommentary .commentaryContent .contentCommentary{
+    width: 100%;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}

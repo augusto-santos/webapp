@@ -5,17 +5,25 @@ title: Testando ReactJS Component Post
 atCreated: 25/05/2017
 viewrs: 15
 comment: 25
-tags: ReactJS, ES2015, JavaScript
+tags: [ReactJS, ES2015, JavaScript, LoopBack, MarkDown]
 ---
 
 ## Introdução
 
  A pagina de **Post** e constituida de varios Components feito sobe medida para ela.
 
-Em busca de torna a pagina mais comfortavel e atraente, cada componente foi desenvolvido 
+ Em busca de torna a pagina mais comfortavel e atraente, cada componente foi desenvolvido 
 cuidadosamente, para manter um perfeito equilibrio e armonia, entre a pagina e seus creador.
 
-## Inflataque ait leves frigida
+Feito em conjunto a uma API, para atender as suas *querys*, para as mais diversas plataformas. 
+
+## Tomada de Decição para API
+
+ As varias opções de **frameworks** no mercado, que facilitam no desenvolvimento de *API*s, são diversificada.
+Para melhor integra a aplicação foi decidido que:
+
+- **RDBMS**: *PostgreSQL*
+- **Servidor**: *NodeJS* usando *ExpressJS*
 
 Letum per ipsa nostro animae, mari illuc in levi corpus aestibus excussam
 deflentem sic cuius. Venere dedit illa cui in quo senecta artus bella inficit,

@@ -4,13 +4,17 @@ import Footer from '../../components/Footer'
 import Button from '../../components/Button'
 import s from './Posts.css'
 
-/** MD File with doc */
-import {user, userAvatar, title, atCreated, viewrs, comment, html} from './Post.md'
+/** Content from a .md file */
+import {user, userAvatar, title, atCreated, viewrs, comment, tags, html} from './Post.md'
 
 /** Post Components */
 import UserPost from '../../components/PostComponents/UserPost'
 import Post from '../../components/PostComponents/Post'
 import BannerPost from '../../components/PostComponents/BannerPost'
+import CommentaryPost from '../../components/PostComponents/CommentaryPost'
+
+/** Commentary Tester .json */
+import CommentTeste from '../../test/CommentaryTeste.json'
 
 const titleWeb = "Posts"
 
@@ -40,11 +44,18 @@ class Posts extends Component{
                             titlePost={title}
                             atCreated={atCreated}
                             viewrs={viewrs}
-                            comments={comment} >
+                            comments={comment}
+                            tag={tags} >
                             <div dangerouslySetInnerHTML={{ __html: html }} />
                         </Post>
                         <div className={`${s.conteudoFooter}`}>
-                            
+                            <div className={`${s.followUser}`}>
+                                <UserPost avatar={userAvatar} alt={user} userName={user} />
+                                <Button label="Seguir" />
+                            </div>
+                            <div className={`${s.contentFooterPost}`}>
+                                <Button><i className="material-icons">share</i></Button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -59,20 +70,17 @@ class Posts extends Component{
                         <Button label="Faça Login para Comentar" />
                     </div>
                     <div className={`${s.comments}`}>
-                        <div className={`${s.comentario}`}>
-                            <div className={`${s.person}`}>
-                                <img src="/img/user.jpg" alt="argus"/>
-                            </div>
-                            <div className={`${s.commentContent}`}>
-                                <div className={`${s.info}`}>
-                                    <div className={`${s.name}`}>Argus</div>
-                                    <div className={`${s.date}`}>11/06/2017</div>
-                                </div>
-                                <div className={`${s.bodyContent}`}>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit assumenda non similique at iure libero itaque minus natus! Architecto voluptates a ullam nulla mollitia unde sunt delectus molestias esse debitis.
-                                </div>
-                            </div>
-                        </div>
+                        {CommentTeste.map((comments) => {
+                            return(
+                                <CommentaryPost
+                                    userAvatar={comments.userAvatar}
+                                    userName={comments.userName}
+                                    atCreated={atCreated}
+                                    key={comments.key} >
+                                    {comments.content}
+                                </CommentaryPost>
+                            )
+                        })}
                     </div>
                 </div>
                 <Footer></Footer>

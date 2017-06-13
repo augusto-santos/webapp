@@ -4,6 +4,58 @@
     display: flex;
     width: 100%;
     height: 280px;
-    margin-top: 30px;
+    margin-top: 60px;
+    color: #5e616b;
     background: var(--color-footer-primary);
+}
+
+.logoFooter{
+    display: flex;
+    width: 100%;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logoFooter img{
+    width: 90px;
+    margin: 15px 0;
+}
+
+.logoFooter p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.siteContent{
+    width: 100%;
+    max-width: 530px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #5e616b;
+    margin: 0 auto;
+}
+
+.link{
+    padding: 15px;
+    text-decoration: none;
+    color: #808286;
+    will-change: color;
+    transition: color .3s ease;
+}
+
+.link:hover{
+    color: #fff;
+}
+
+.contact{
+    display: flex;
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
 }

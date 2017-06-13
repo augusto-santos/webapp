@@ -16,7 +16,7 @@
 .posts .header .actions{
     display: flex;
     height: 100%;
-    width: 450px;
+    width: 100%;
     align-items: center;
     justify-content: flex-end;
 }
@@ -39,10 +39,17 @@
     padding: 0 10px;
 }
 
-.conteudoFooter .actionsFooter{
-    display: flex;
+.conteudoFooter .followUser{
     width: 50%;
     height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.conteudoFooter .contentFooterPost{
+    width: 50%;
+    height: 100%;
+    display: flex;
     align-items: center;
     justify-content: flex-end;
 }
@@ -98,63 +105,7 @@
 .commentary .comments{
     display: flex;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.commentary .comentario{
-    display: flex;
-    width: 100%;
-    max-width: 650px;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    margin-bottom: 10px;
-}
-
-.comentario .person{
-    display: flex;
-    width: 60px;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.comentario .person img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.comentario .commentContent{
-    display: flex;
-    width: 100%;
     flex-direction: column;
-}
-
-.comentario .commentContent .info{
-    display: flex;
-    height: 30px;
     align-items: center;
-    padding: 0 15px;
-}
-
-.comentario .commentContent .info .name{
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--color-primary);
-    padding-right: 10px;
-}
-
-.comentario .commentContent .info .date{
-    font-size: 12px;
-    font-weight: 600;
-    color: #666;
-}
-
-.comentario .commentContent .bodyContent{
-    width: 100%;
-    padding: 0 15px;
-    font-size: 14px;
-    font-weight: 400;
-    color: #333;
+    justify-content: center;
 }
