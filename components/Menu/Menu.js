@@ -81,9 +81,6 @@ class Menu extends Component{
                             return(
                                 <li className={`${s.itemList}`} key={items.id} style={this.handleItemDelay(items.id)}>
                                     <ItemLink to={items.link} className={`${s.item} ${s.itemAnim}`} >
-                                        <div className={`${s.colIcon}`}>
-                                            {items.icon ? this.handleIconItem(items.icon) : null}
-                                        </div>
                                         <p className={`${s.itemLabel}`}>{items.item}</p> 
                                         {items.keymap ? this.handleKeymapItem(items.keymap) : null}
                                     </ItemLink>
