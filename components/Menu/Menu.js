@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { styleOn, styleOff, delayItem, handleKeymapItem } from './resources/functions'
+import { styleOn, styleOff, itemListStyle, delayItem, handleKeymapItem } from './resources/functions'
 import ItemLink from '../Link'
 import s from './Menu.css'
 
@@ -79,7 +79,7 @@ class Menu extends Component{
                     <ul className={s.menus}>
                         {this.props.List.map((items) => {
                             return(
-                                <li className={`${s.itemList}`} key={items.id} style={this.handleItemDelay(items.id)}>
+                                <li className={itemListStyle} key={items.id} style={this.handleItemDelay(items.id)}>
                                     <ItemLink to={items.link} className={`${s.item} ${s.itemAnim}`} >
                                         <div className={`${s.colIcon}`}>
                                             {items.icon ? this.handleIconItem(items.icon) : null}

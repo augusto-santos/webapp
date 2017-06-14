@@ -83,7 +83,7 @@ class Posts extends Component{
                         })}
                     </div>
                 </div>
-                <Footer></Footer>
+                <Footer />
             </Layout>
         )
     }

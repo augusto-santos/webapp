@@ -22,3 +22,10 @@ export function delayItem(index){
 function delayTransition(transitionDuration, index){
     return ((((transitionDuration / 2 ) + index / 10) / 2))
 }
+
+export const itemListStyle = {
+    opacity: 0,
+    height: '48px',
+    transform: 'scale(0,1)',
+    transformOrigin: 'left'
+}
