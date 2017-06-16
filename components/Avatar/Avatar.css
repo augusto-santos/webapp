@@ -1,13 +1,13 @@
 .avatar{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
-    .avatar img{
-        height: 32px;
-        width: 32px;
-        border-radius: 50%;
-        outline: 0;
-        vertical-align: top;
-    }
+  .avatar img{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    outline: 0;
+    vertical-align: top;
+  }

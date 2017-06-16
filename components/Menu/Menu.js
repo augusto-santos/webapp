@@ -14,7 +14,6 @@ class Menu extends Component{
         this.handleOpen = this.handleOpen.bind(this)
         this.handleClose = this.handleClose.bind(this)
         this.handleItemDelay = this.handleItemDelay.bind(this)
-        this.handleIconItem = this.handleIconItem.bind(this)
     }
 
     componentDidMount() {
@@ -60,12 +59,6 @@ class Menu extends Component{
     handleKeymapItem(index){
         return(
             <p className={`${s.keymapItem}`}>{index}</p>
-        )
-    }
-
-    handleIconItem(index){
-        return (
-            <i className={`material-icons ${s.iconItem}`}>{index}</i>
         )
     }
 

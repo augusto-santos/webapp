@@ -21,11 +21,11 @@
     "component": "./routes/Home"
   },
   {
-    "path": "/content",
-    "component": "./routes/Content"
-  },
-  {
     "path": "/post",
     "component": "./routes/Posts"
+  },
+  {
+    "path": "/Login",
+    "component": "./routes/Login"
   }
 ]

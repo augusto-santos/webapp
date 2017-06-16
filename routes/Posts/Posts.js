@@ -5,7 +5,7 @@ import Button from '../../components/Button'
 import s from './Posts.css'
 
 /** Content from a .md file */
-import {user, userAvatar, title, atCreated, viewrs, comment, tags, html} from './Post.md'
+import {key, user, userAvatar, title, atCreated, viewrs, comment, tags, html} from './Post.md'
 
 /** Post Components */
 import UserPost from '../../components/PostComponents/UserPost'
@@ -21,7 +21,7 @@ const titleWeb = "Posts"
 class Posts extends Component{
 
     componentDidMount() {
-        document.title = titleWeb
+        document.title = title
     }
 
     render(){

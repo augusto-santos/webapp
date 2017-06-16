@@ -1,4 +1,5 @@
 ---
+key: 5
 user: Augusto Santos
 userAvatar: /img/user.jpg
 title: Testando ReactJS Component Post

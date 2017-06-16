@@ -4,9 +4,7 @@ import s from './ButtonSocial.css'
 class ButtonSocial extends Component{
     render(){
         return(
-            <div className={`${s.buttonSocial}`}>
-                <p>Teste</p>
-            </div>
+          <a href="#" className={`${s.socialButton}`} >Social</a>  
         )
     }
 }

@@ -1,3 +1,15 @@
-.ButtonSocial{
-    
+@import '../../variable.css';
+
+:root{
+	--social-button-height: 60px;
+}
+
+.socialButton{
+  display: flex;
+  width: 140px;
+  height: var(--social-button-height);
+	align-items: center;
+	justify-content: center;
+	border-radius: calc(var(--social-button-height) / 2);
+	background: var(--color-primary);
 }
