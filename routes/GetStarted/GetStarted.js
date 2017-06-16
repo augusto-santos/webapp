@@ -5,24 +5,19 @@ import Footer from '../../components/Footer'
 import s from './GetStarted.css'
 import { title, html } from './GetStarted.md'
 
-const URL = 'http://0.0.0.0:5000/api/'
+const Conn = 'http://0.0.0.0:5000/api/Posts'
 
 class AboutPage extends React.Component {
 
   constructor(props){
     super(props)
-    this.state = { content: []}
-
-    this.refresh()
-  }
-
-  refresh(){
-    axios.get(`${URL}`)
-      .then(resp => this.setState({...this.state, content: resp.data.posts}))
+    this.state = { content: []}    
   }
 
   componentDidMount() {
     document.title = title
+    axios.get(Conn)
+      .then(resp => this.setState({...this.state, content: resp.data}))
   }
 
   render() {
@@ -36,9 +31,6 @@ class AboutPage extends React.Component {
                 <div className={`${s.info}`}>
                   <h4>{items.title}</h4>
                   <p>{items.atCreated}</p>
-                </div>
-                <div>
-                  <p>{this.state.content.author}</p>
                 </div>
                 <div className={`${s.counts}`}>
                   <div className={`${s.itemsCount}`}>

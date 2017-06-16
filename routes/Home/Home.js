@@ -1,42 +1,30 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 import Layout from '../../components/Layout';
 import Link from '../../components/Link';
 import s from './Home.css';
 
+const teste = 'http://0.0.0.0:5000/api/containers/container1/download/Post.md'
 const title = 'React App Starter Kit';
 
 class HomePage extends Component {
 
+  constructor(props){
+    super(props)
+    this.state = {content: ''}
+  }
+
   componentDidMount() {
     document.title = title;
+    axios.get(teste)
+      .then((resp => this.setState({...this.state, content: resp.data})))
   }
 
   render() {
     return (
       <Layout className={s.content}>
         <div className={`${s.wrapperContainer}`}>
-          <h1>Welcome!</h1>
-          <p>
-            This website is built with <a href="https://github.com/kriasoft/react-app">React App
-            SDK</a> — CLI tools and templates for authoring React/Redux apps with just a single dev
-            dependency and zero configuration. It is powered by popular front-end dev tools such
-            as <a href="http://babeljs.io/">Babel</a>
-            , <a href="https://webpack.github.io/">Webpack</a>
-            , <a href="http://postcss.org/">PostCSS</a>
-            , <a href="https://github.com/css-modules/css-modules">CSS Modules</a>
-            , <a href="https://browsersync.io/">Browsersync</a>
-            , <a href="https://webpack.github.io/docs/hot-module-replacement.html">HMR</a>
-            , <a href="http://gaearon.github.io/react-hot-loader/">React Hot Loader</a>
-            ; featuring component-based development approach, progressive enhancement,
-            code splitting and async chunk loading, declarative routes, navigation, application
-            state management and more.
-          </p>
-          <p>
-            To learn more visit project's <a href="https://github.com/kriasoft/react-app">homepage</a>
-            , <Link to="/get-started">getting started</Link> guide,
-            join <a href="https://gitter.im/kriasoft/react-app">#react-app</a> chat room on Gitter to
-            stay up to date.
-          </p>
+          <div dangerouslySetInnerHTML={{ __html: this.state.content }} />
         </div>
       </Layout>
     );
