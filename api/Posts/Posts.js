@@ -1,4 +1,5 @@
 import axios from 'axios'
+import action from '../../actions/getStartedActions'
 import { connect } from '../'
 
 class PostsAPI{

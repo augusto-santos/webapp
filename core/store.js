@@ -9,6 +9,7 @@
 
 import { combineReducers, createStore } from 'redux';
 import Reducers from './reducers'
+
 // Centralized application state
 // For more information visit http://redux.js.org/
 // import Reducers from reducers a include him here

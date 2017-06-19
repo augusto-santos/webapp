@@ -20,7 +20,7 @@ class AboutPage extends Component {
 
   componentDidMount() {
     document.title = title
-    this.props.conteudo()
+    console.log(this.props.content)
   }
 
   render() {
@@ -28,7 +28,26 @@ class AboutPage extends Component {
       <Layout className={s.content}>
         <div className={`${s.wrapperContainer}`}>
           <h1>{title}</h1>
-          {this.props.conteudo().map((items) => {
+          {this.props.content}
+        </div>
+        <Footer />
+      </Layout>
+    );
+  }
+}
+
+function mapStateToProps(store){
+  return{
+    content: store.getStarted.content
+  }
+}
+
+export default connect(mapStateToProps)(AboutPage)
+
+
+/*
+
+{this.props.content.map((items) => {
             return(
               <div key={items.id} className={`${s.wrapperPosts}`}>
                 <div className={`${s.info}`}>
@@ -48,21 +67,5 @@ class AboutPage extends Component {
               </div>
             )
           })}
-        </div>
-        <Footer />
-      </Layout>
-    );
-  }
-}
 
-function mapStateToProps(state){
-  return{
-    conteudo: state.content
-  }
-}
-
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({ loadPosts }, dispatch)
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AboutPage)
+*/
