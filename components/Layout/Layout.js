@@ -3,6 +3,12 @@ import Header from '../Header';
 import Sidebar from '../Sidebar'
 import s from './Layout.css'
 
+/** options JSON's */
+import c from '../../options/Content.json'
+import navg from '../../options/SidebarNavigation.json'
+import MenuList from '../../options/MenuList.json'
+import MenuUser from '../../options/MenuUser.json'
+
 class Layout extends React.Component{
 
   constructor(props){
@@ -27,8 +33,16 @@ class Layout extends React.Component{
     const styleClass = this.state.siderbarOpen ? `${s.container} ${s.isOpen}` : `${s.container}`
     return (
       <div className={s.root}>
-        <Header toggle={this.handleSidebar} isOpen={this.state.siderbarOpen} />
-        <Sidebar isOpen={this.state.siderbarOpen} />
+        <Header 
+            avatarUser={c.AvatarProps.AvatarUser} 
+            avatarAlt={c.AvatarProps.AvatarAlt}
+            SettingMenu={MenuList}
+            UserMenu={MenuUser}
+            toggle={this.handleSidebar} 
+            isOpen={this.state.siderbarOpen} />
+        <Sidebar 
+          isOpen={this.state.siderbarOpen}
+          navigation={navg} />
         <section className={styleClass} >
           <div className={`${this.props.className ? ` ${this.props.className}` : ''}`}>
             {this.props.children}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import Layout from '../../components/Layout'
 import Footer from '../../components/Footer'
 import Button from '../../components/Button'
@@ -14,11 +15,16 @@ import BannerPost from '../../components/PostComponents/BannerPost'
 import CommentaryPost from '../../components/PostComponents/CommentaryPost'
 
 /** Commentary Tester .json */
-import CommentTeste from '../../test/CommentaryTeste.json'
+import CommentTeste from '../../options/CommentaryTeste.json'
 
 const titleWeb = "Posts"
 
 class Posts extends Component{
+
+    constructor(props){
+        super(props)
+        this.state = {content: ''}
+    }
 
     componentDidMount() {
         document.title = title
@@ -41,6 +47,7 @@ class Posts extends Component{
                     </div>
                     <div className={`${s.body}`}>
                         <Post
+                            key={key}
                             titlePost={title}
                             atCreated={atCreated}
                             viewrs={viewrs}

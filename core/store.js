@@ -9,6 +9,9 @@
 
 import { createStore } from 'redux';
 
+/* Import Actions */
+
+
 // Centralized application state
 // For more information visit http://redux.js.org/
 const store = createStore((state, action) => {
@@ -20,5 +23,8 @@ const store = createStore((state, action) => {
       return state;
   }
 });
+
+/* Actions dispatch */
+
 
 export default store;

@@ -2,8 +2,6 @@ import React from 'react'
 import Avatar from '../Avatar'
 import Menu from '../Menu'
 import Search from '../Search'
-import ListTeste from '../../test/MenuList.json'
-import UserTeste from '../../test/MenuUser.json'
 import s from './Header.css'
 
 class Header extends React.Component{
@@ -24,12 +22,12 @@ class Header extends React.Component{
                     <div className={s.search}>
                         <Search />
                     </div>
-                    <Menu List={ListTeste} className={s.navButton}>
+                    <Menu List={this.props.SettingMenu} className={s.navButton}>
                         <i className="material-icons">more_vert</i>
                     </Menu>
-                    <Menu List={UserTeste} className={s.navButton}>
-                        <Avatar user="Argus" 
-                            src="/img/user.jpg" />
+                    <Menu List={this.props.UserMenu} className={s.navButton}>
+                        <Avatar user={this.props.avatarAlt} 
+                            src={this.props.avatarUser} />
                     </Menu>
                 </div>
             </header>

@@ -1,0 +1,8 @@
+{
+	"AvatarProps": {
+		"AvatarUser": "img/user.jpg",
+		"AvatarAlt": "Augusto Santos"
+	},
+	"SearchPlaceHold": "Procura e tecle Enter",
+	"tagsPost": ["ReactJS", "ES2015", "JavaScript", "LoopBack", "MarkDown"]
+}

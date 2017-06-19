@@ -14,7 +14,7 @@ class Post extends Component{
                 <ul className={`${s.tags}`}>
                     {this.props.tag.map((tags) => {
                         return(
-                            <li className={`${s.tag}`}>{tags}</li>
+                            <li className={`${s.tag}`} key={tags}>{tags}</li>
                         )
                     })}
                 </ul>

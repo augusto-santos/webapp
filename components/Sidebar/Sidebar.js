@@ -11,7 +11,7 @@ class Sidebar extends Component{
                     <h4>Navegação</h4>
                 </div>
                 <div className={s.container}>
-                    <Navigation />
+                    <Navigation Nav={this.props.navigation} />
                 </div>
             </aside>
         )

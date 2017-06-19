@@ -1,23 +1,27 @@
-import React from 'react'
+import React, { Component } from 'react'
 import axios from 'axios'
+
+import api from '../../api'
+
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { load_posts } from '../../actions/getStartedActions'
+
+/** Import Template */
 import Layout from '../../components/Layout'
 import Footer from '../../components/Footer'
+
+/** Import Stayle*/
 import s from './GetStarted.css'
-import { title, html } from './GetStarted.md'
 
-const Conn = 'http://0.0.0.0:5000/api/Posts'
+const title = "Exp Dev"
 
-class AboutPage extends React.Component {
-
-  constructor(props){
-    super(props)
-    this.state = { content: []}    
-  }
+class AboutPage extends Component {
 
   componentDidMount() {
     document.title = title
-    axios.get(Conn)
-      .then(resp => this.setState({...this.state, content: resp.data}))
+    api.connect.get('/Posts')
+      .then((resp) => this.setState({...state, content: resp.data}))
   }
 
   render() {
@@ -50,7 +54,16 @@ class AboutPage extends React.Component {
       </Layout>
     );
   }
-
 }
 
-export default AboutPage
+function mapStateToProps(state){
+  return{
+    content: state.content
+  }
+}
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({ load_posts }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AboutPage)

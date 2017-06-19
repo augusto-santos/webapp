@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import history from '../../core/history'
 import Link from '../Link'
-import NavTeste from '../../test/SidebarNavigation.json'
 import s from './Sidebar.css'
 
 class Navigations extends Component{
@@ -10,7 +9,7 @@ class Navigations extends Component{
         const linkClass = href => `${s.link}${path === href ? ` ${s.active} ` : ''}`
         return(
             <nav className={s.nav} >
-                {NavTeste.map((items) => {
+                {this.props.Nav.map((items) => {
                     return(
                         <Link key={items.key} className={linkClass(`${items.class}`)} to={items.to}>{items.title}</Link>
                     )

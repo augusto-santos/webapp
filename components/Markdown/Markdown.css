@@ -1,0 +1,53 @@
+.wrapperMarkdown{
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+    color: #222;
+    padding: 15px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.wrapperMarkdown pre{
+    width: 100%;
+    max-width: 850px;
+    background: #eee;
+    border-radius: 2px;
+    padding: 20px;
+    margin: 15px auto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #444;
+}
+
+.wrapperMarkdown h1{
+     color: #111;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.wrapperMarkdown h2{
+    color: #222;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.wrapperMarkdown h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.wrapperMarkdown p{
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.wrapperMarkdown ul{
+    width: 100%;
+    padding: 10px 30px;
+}
