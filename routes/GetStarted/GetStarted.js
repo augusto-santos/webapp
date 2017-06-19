@@ -5,7 +5,7 @@ import api from '../../api'
 
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { load_posts } from '../../actions/getStartedActions'
+import { loadPosts } from '../../actions/getStartedActions'
 
 /** Import Template */
 import Layout from '../../components/Layout'
@@ -20,8 +20,7 @@ class AboutPage extends Component {
 
   componentDidMount() {
     document.title = title
-    api.connect.get('/Posts')
-      .then((resp) => this.setState({...state, content: resp.data}))
+    this.props.conteudo()
   }
 
   render() {
@@ -29,7 +28,7 @@ class AboutPage extends Component {
       <Layout className={s.content}>
         <div className={`${s.wrapperContainer}`}>
           <h1>{title}</h1>
-          {this.state.content.map((items) => {
+          {this.props.conteudo().map((items) => {
             return(
               <div key={items.id} className={`${s.wrapperPosts}`}>
                 <div className={`${s.info}`}>
@@ -58,12 +57,12 @@ class AboutPage extends Component {
 
 function mapStateToProps(state){
   return{
-    content: state.content
+    conteudo: state.content
   }
 }
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({ load_posts }, dispatch)
+  return bindActionCreators({ loadPosts }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(AboutPage)
