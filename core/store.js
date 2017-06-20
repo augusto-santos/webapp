@@ -7,13 +7,17 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import { combineReducers, createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk'
 import Reducers from './reducers'
 
 // Centralized application state
 // For more information visit http://redux.js.org/
 // import Reducers from reducers a include him here
-const store = createStore(Reducers);
+const store = createStore(
+	Reducers,
+	applyMiddleware(thunk)
+)
 
 
 export default store;

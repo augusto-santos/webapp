@@ -4,10 +4,10 @@ import { connect } from '../'
 
 class PostsAPI{
 	/** GET ALL*/
-	static getAllPosts(){
-		return connect.get('/Posts')
-			.then((resp) => resp)
-			.catch((err) => err)
+	static getAllPosts(res){
+		return conn.get('/Posts')
+			.then((resp) => res)
+			.catch((err) => res)
 	}
 	/** GET by ID*/
 }

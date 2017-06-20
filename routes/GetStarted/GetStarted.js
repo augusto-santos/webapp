@@ -20,7 +20,7 @@ class AboutPage extends Component {
 
   componentDidMount() {
     document.title = title
-    console.log(this.props.content)
+    console.log(this.props.getStarted)
   }
 
   render() {
@@ -28,7 +28,7 @@ class AboutPage extends Component {
       <Layout className={s.content}>
         <div className={`${s.wrapperContainer}`}>
           <h1>{title}</h1>
-          {this.props.content}
+          {this.props.getStarted}
         </div>
         <Footer />
       </Layout>
@@ -38,15 +38,14 @@ class AboutPage extends Component {
 
 function mapStateToProps(store){
   return{
-    content: store.getStarted.content
+    content: store.getStarted
   }
 }
 
 export default connect(mapStateToProps)(AboutPage)
 
 
-/*
-
+/**
 {this.props.content.map((items) => {
             return(
               <div key={items.id} className={`${s.wrapperPosts}`}>
@@ -67,5 +66,4 @@ export default connect(mapStateToProps)(AboutPage)
               </div>
             )
           })}
-
 */
