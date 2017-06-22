@@ -5,7 +5,6 @@ import api from '../../api'
 
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { loadPosts } from '../../actions/getStartedActions'
 
 /** Import Template */
 import Layout from '../../components/Layout'

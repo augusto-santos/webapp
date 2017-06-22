@@ -4,7 +4,7 @@ import s from './Markdown.css'
 class Markdown extends Component{
 	render(){
 		return(
-			<div className={`${s.wrapperMarkdown}`}>
+			<div className={`${s.wrapperMarkdown} ${s.dark}`}>
 				<div dangerouslySetInnerHTML={{ __html: this.props.Content }} />
 			</div>
 		)

@@ -14,13 +14,16 @@ class Login extends Component{
                 <p>Share your exprience</p>
               </div>
             </div>
+            <div className={`${s.msg}`}>
+              <h4>Bem vindo!</h4>
+              <p>faça login e desfrute desse esplendidos topicos.</p>
+            </div>
             <div className={`${s.field_form}`}>
               <div className={`${s.form_ctrl}`}>
                 <input type="email" placeholder="Username"/>
               </div>
               <div className={`${s.forget}`}>
-                <a href="#">Não é cadastrado?</a>
-                <a href="#">Esqueçeu o nome de usuário?</a>
+                <a href="#">Esqueçeu o seu nome de usuário?</a>
               </div>
             </div>
             <div className={`${s.action_form}`}>

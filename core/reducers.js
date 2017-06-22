@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import getStartedReducer from '../actions/getStartedReducer.js'
+import getStarted from '../actions/GetStarted/reducers.js'
 
 const rootReducers = combineReducers({
-    getStartedReducer
+    getStarted
 })
 
 export default rootReducers
