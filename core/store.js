@@ -11,13 +11,15 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
 import Reducers from './reducers'
 
+// devTools connection
+
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__
+  && window.__REDUX_DEVTOOLS_EXTENSION__()
+
 // Centralized application state
 // For more information visit http://redux.js.org/
 // import Reducers from reducers a include him here
-const store = createStore(
-	Reducers,
-	applyMiddleware(thunk)
-)
+const store = createStore(Reducers, devTools, applyMiddleware(thunk))
 
 
 export default store;

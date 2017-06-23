@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
-import axios from 'axios'
-
-import api from '../../api'
-
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-/** Import Template */
+import { loadAllPosts } from '../../actions/GetStarted/actions'
+
 import Layout from '../../components/Layout'
 import Footer from '../../components/Footer'
 
-/** Import Stayle*/
 import s from './GetStarted.css'
 
 const title = "Exp Dev"
@@ -19,7 +15,10 @@ class AboutPage extends Component {
 
   componentDidMount() {
     document.title = title
-    console.log(this.props.getStarted)
+  }
+
+  componentWillMount() {
+    this.props.conteudo
   }
 
   render() {
@@ -27,7 +26,7 @@ class AboutPage extends Component {
       <Layout className={s.content}>
         <div className={`${s.wrapperContainer}`}>
           <h1>{title}</h1>
-          {this.props.getStarted}
+          {this.props.conteudo}
         </div>
         <Footer />
       </Layout>
@@ -35,34 +34,14 @@ class AboutPage extends Component {
   }
 }
 
-function mapStateToProps(store){
+function mapStateToProps(state){
   return{
-    content: store.getStarted
+    conteudo: state.request.conteudo
   }
 }
 
-export default connect(mapStateToProps)(AboutPage)
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({loadAllPosts}, dispatch)
+}
 
-
-/**
-{this.props.content.map((items) => {
-            return(
-              <div key={items.id} className={`${s.wrapperPosts}`}>
-                <div className={`${s.info}`}>
-                  <h4>{items.title}</h4>
-                  <p>{items.atCreated}</p>
-                </div>
-                <div className={`${s.counts}`}>
-                  <div className={`${s.itemsCount}`}>
-                    <i className="material-icons">visibility</i>
-                    <p>{items.viewrs}</p>
-                  </div>
-                  <div className={`${s.itemsCount}`}>
-                    <i className="material-icons">forum</i>
-                    <p>{items.commentaries}</p>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-*/
+export default connect(mapStateToProps, mapDispatchToProps)(AboutPage)

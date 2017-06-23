@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux'
-import getStarted from '../actions/GetStarted/reducers.js'
+
+/** actions reducers imports */
+import getStartReducer from '../actions/GetStarted/reducer'
+import searchReducer from '../actions/Search/reducer'
 
 const rootReducers = combineReducers({
-    getStarted
+    request: getStartReducer,
+    search: searchReducer
 })
 
 export default rootReducers

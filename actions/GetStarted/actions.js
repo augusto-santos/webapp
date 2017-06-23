@@ -1,29 +1,12 @@
-/** import */
-import PostsAPI from '../api/Posts'
+import axios from 'axios'
 
-/** consts */
-export const REQUEST_POSTS = 'REQUEST_POSTS'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const INVALID_POSTS = 'INVALID_POSTS'
+export function get(){
+	return axios.get('http://0.0.0.0:5000/api/Posts')
+}
 
-/** functions */
-export const requestPosts = (posts) => ({
-	type: REQUEST_POSTS,
-	posts
-})
-
-export const receivaPosts = (posts) => ({
-	type: RECEIVE_POSTS,
-	posts: posts.data.children.map(child => child.data)
-})
-
-export const invalidPosts = (posts) => ({
-	type: INVALID_POSTS,
-	posts
-})
-
-const getPosts = post => dispatch => {
-	dispatch(requestPosts(post))
-	return PostsAPI.getAllPosts()
-		.then(resp => dispatch(receivaPosts(resp)))
-}  
+export const loadAllPosts = () => {
+	return {
+		type: 'LOAD_ALL_POSTS',
+		payload: get()
+	}
+}
