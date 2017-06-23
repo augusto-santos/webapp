@@ -1,4 +1,5 @@
 import markdownIt from 'markdown-it'
+import mdItHljs from 'markdown-it-highlightjs'
 import hljs from 'highlight.js'
 
 export default function parser(source){
@@ -19,6 +20,8 @@ export default function parser(source){
       return ''
     },
 	})
+
+  md.use(mdItHljs)
 
 	return md.render(source)
 }
