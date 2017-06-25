@@ -1,4 +1,4 @@
-const INITIAL_STATE = {conteudo: 'Carregando...'}
+const INITIAL_STATE = {conteudo: ['loading...']}
 
 export default (state = INITIAL_STATE, action) => {
     switch(action.type){

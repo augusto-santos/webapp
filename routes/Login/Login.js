@@ -20,7 +20,7 @@ class Login extends Component{
             </div>
             <div className={`${s.field_form}`}>
               <div className={`${s.form_ctrl}`}>
-                <input type="email" placeholder="Username"/>
+                <input type="email" placeholder="Username" value={'teste'}/>
               </div>
               <div className={`${s.forget}`}>
                 <a href="#">Esqueçeu o seu nome de usuário?</a>

@@ -1,10 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import s from './Search.css'
-
-/** actions redux imports */
-import { changeDescription } from '../../actions/Search/actions'
 
 class Search extends Component{
 	render(){
@@ -23,13 +18,4 @@ class Search extends Component{
 	}
 }
 
-function mapStateToProps(state){
-	return {
-		busca: state.search.busca
-	}
-}
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({ changeDescription}, dispatch)
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Search)
+export default Search

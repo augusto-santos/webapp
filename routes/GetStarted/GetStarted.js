@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import axios from 'axios'
 
 import { loadAllPosts } from '../../actions/GetStarted/actions'
 
@@ -17,7 +18,7 @@ class AboutPage extends Component {
     document.title = title
   }
 
-  componentWillMount() {
+  componentWillMount(){
     this.props.conteudo
   }
 

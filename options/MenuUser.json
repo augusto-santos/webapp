@@ -1,5 +1,5 @@
 [
-    {"id": 1, "item": "Ver Perfil", "link": "#"},
+    {"id": 1, "item": "Ver Perfil", "link": "/User"},
     {"id": 2, "item": "Definições de Conta", "link": "#"},
     {"id": 3, "item": "Logout", "link": "#"}
 ]

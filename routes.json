@@ -24,5 +24,13 @@
   {
     "path": "/Login",
     "component": "./routes/Login"
+  },
+  {
+    "path": "/artigos",
+    "component": "./routes/Content"
+  },
+  {
+    "path": "/User",
+    "component": "./routes/User"
   }
 ]

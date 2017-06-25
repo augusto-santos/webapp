@@ -8,18 +8,21 @@
  */
 
 import { createStore, applyMiddleware } from 'redux';
+
+/** Middleware */
 import thunk from 'redux-thunk'
+import promise from 'redux-promise'
+/** Reducers */
 import Reducers from './reducers'
 
 // devTools connection
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__
-  && window.__REDUX_DEVTOOLS_EXTENSION__()
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 // Centralized application state
 // For more information visit http://redux.js.org/
 // import Reducers from reducers a include him here
-const store = createStore(Reducers, devTools, applyMiddleware(thunk))
+const store =createStore(Reducers, applyMiddleware(thunk, promise), devTools)
 
 
 export default store;

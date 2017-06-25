@@ -20,7 +20,8 @@
   "devDependencies": {
     "axios": "^0.16.2",
     "prop-types": "^15.5.10",
-    "react-app-tools": "^1.1.2"
+    "react-app-tools": "^1.1.2",
+    "redux-promise": "^0.5.3"
   },
   "babel": {
     "presets": [

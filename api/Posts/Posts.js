@@ -1,13 +1,11 @@
-import axios from 'axios'
-import action from '../../actions/getStartedActions'
-import { connect } from '../'
+import { conn } from '../'
 
 class PostsAPI{
 	/** GET ALL*/
-	static getAllPosts(res){
+	static getAllPosts(){
 		return conn.get('/Posts')
-			.then((resp) => res)
-			.catch((err) => res)
+			.then((resp) => resp)
+			.catch((err) => err)
 	}
 	/** GET by ID*/
 }
