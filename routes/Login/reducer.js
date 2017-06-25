@@ -26,7 +26,7 @@ export const changeField = (state = {email: ''}, action) => {
 	switch(action.type){
 		case CHANGE_FIELD:
 		 return {...state, email: action.payload }
-		default
+		default:
 			return state
 	}
 }
