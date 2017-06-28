@@ -20,7 +20,7 @@ class Header extends React.Component{
                         <p>{title}</p>
                     </div>
                     <div className={s.search}>
-                        <Search />
+                        <Search busca={this.props.search} changeDescription={this.props.change} />
                     </div>
                     <Menu List={this.props.SettingMenu} className={s.navButton}>
                         <i className="material-icons">more_vert</i>

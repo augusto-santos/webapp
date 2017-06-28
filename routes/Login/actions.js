@@ -1,15 +1,8 @@
-import { LOGIN_REQUESTING, CHANGE_FIELD } from './constants'
+import { FIELD_CHANGE } from './constants'
 
-export const loginRequest = function loginRequest({email, password}){
-	return{
-		type: LOGIN_REQUESTING,
-		email,
-		password
-	}
-}
-export const changeEmail = (e) => {
-	return {
-		type: CHANGE_FIELD,
-		payload: e.target.value
-	}
+export const handleChange = (e) => {
+  return{
+    type: FIELD_CHANGE,
+    payload: e.target.value
+  }
 }

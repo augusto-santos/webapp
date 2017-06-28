@@ -1,4 +1,9 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { changeSearch } from '../../actions/Layout/actions'
+
 import Header from '../Header';
 import Sidebar from '../Sidebar'
 import s from './Layout.css'
@@ -39,7 +44,9 @@ class Layout extends React.Component{
             SettingMenu={MenuList}
             UserMenu={MenuUser}
             toggle={this.handleSidebar} 
-            isOpen={this.state.siderbarOpen} />
+            isOpen={this.state.siderbarOpen}
+            search={this.props.search}
+            change={this.props.changeSearch} />
         <Sidebar 
           isOpen={this.state.siderbarOpen}
           navigation={navg} />
@@ -53,6 +60,16 @@ class Layout extends React.Component{
   }
 }
 
-export default Layout;
+const mapStateToProps = (state) => {
+  return {
+    search: state.layout.search
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ changeSearch }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);
 
 /* {this.state.siderbarOpen ? this.outSidebar() : null} */

@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { handleChange } from './actions'
 import s from './Login.css'
 
 class Login extends Component{
@@ -20,7 +23,9 @@ class Login extends Component{
             </div>
             <div className={`${s.field_form}`}>
               <div className={`${s.form_ctrl}`}>
-                <input type="email" placeholder="Username" value={'teste'}/>
+                <input type="email" placeholder="Username" 
+                  value={this.props.form}
+                  onChange={this.props.handleChange} />
               </div>
               <div className={`${s.forget}`}>
                 <a href="#">Esqueçeu o seu nome de usuário?</a>
@@ -38,4 +43,12 @@ class Login extends Component{
   }
 }
 
-export default Login
+const mapStateToProps = (state) => {
+  return form = state.loginReducer.form
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({handleChange}, dispatch)
+}
+
+export default connect(mapDispatchToProps)(Login)
