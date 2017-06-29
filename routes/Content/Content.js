@@ -17,7 +17,6 @@ class Content extends Component{
 
   componentDidMount() {
     document.title = title
-    console.log(this.props.conteudo)
   }
 
   render(){

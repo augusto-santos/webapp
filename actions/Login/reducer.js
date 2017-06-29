@@ -1,13 +1,13 @@
-import { CHANGE_SEARCH, TOOGLE_MENU } from './constants'
+import { CHANGE_FIELD } from './constants'
 
 const INITIAL_STATE = {
-  search: ''
+  emailField: ''
 }
 
 const reducer = (state = INITIAL_STATE, action) => {
   switch(action.type){
-    case CHANGE_SEARCH:
-      return { ...state, search: action.payload }
+    case CHANGE_FIELD: 
+      return { ...state, emailField: action.payload}
     default:
       return state
   }
