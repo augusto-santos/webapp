@@ -26,7 +26,11 @@ class Content extends Component{
         <div className={`${s.conteudo}`}>
           <div className={`${s.wrapperContainer}`}>
             <h1>Teste</h1>
-            {this.props.conteudo}
+            {this.props.conteudo.map((item)=>{
+              return(
+                <p key={item.id} >{item.title}</p>
+              )
+            })}
           </div>
         </div>
         <Footer></Footer>
