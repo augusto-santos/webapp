@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import axios from 'axios'
 
-import { loadAllPosts } from '../../actions/GetStarted/actions'
+import { loadPosts } from '../../actions/GetStarted/actions'
 
 import Layout from '../../components/Layout'
 import Footer from '../../components/Footer'
-
+import md from '../../components/Markdown/utils/markdown-parser'
+import Markdown from '../../components/Markdown'
 import s from './GetStarted.css'
 
 const title = "Exp Dev"
@@ -19,7 +20,7 @@ class AboutPage extends Component {
   }
 
   componentWillMount(){
-    this.props.conteudo
+    this.props.loadPosts()
   }
 
   render() {
@@ -27,7 +28,7 @@ class AboutPage extends Component {
       <Layout className={s.content}>
         <div className={`${s.wrapperContainer}`}>
           <h1>{title}</h1>
-          {this.props.conteudo}
+          <Markdown Content={this.props.conteudo} />
         </div>
         <Footer />
       </Layout>
@@ -37,12 +38,11 @@ class AboutPage extends Component {
 
 function mapStateToProps(state){
   return{
-    conteudo: state.request.conteudo
+    conteudo: state.started.content
   }
 }
 
-function mapDispatchToProps(dispatch){
-  return bindActionCreators({loadAllPosts}, dispatch)
-}
+const mapDispatchToProps = dispatch => 
+  bindActionCreators({ loadPosts }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(AboutPage)

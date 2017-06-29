@@ -1,9 +1,13 @@
-const INITIAL_STATE = {conteudo: ['loading...']}
+import { GET_POST } from './constants'
+
+const INITIAL_STATE = {
+    content: []
+}
 
 export default (state = INITIAL_STATE, action) => {
     switch(action.type){
-        case 'LOAD_ALL_POSTS':
-            return {...state, conteudo: action.payload.data}
+        case GET_POST:
+            return {...state, content: action.payload}
         default:
         	return state
     }    
