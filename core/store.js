@@ -22,7 +22,7 @@ const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_
 // Centralized application state
 // For more information visit http://redux.js.org/
 // import Reducers from reducers a include him here
-const store =createStore(Reducers, applyMiddleware(thunk, promise), devTools)
+const store = applyMiddleware(thunk, promise)(createStore)(Reducers, devTools)
 
 
 export default store;

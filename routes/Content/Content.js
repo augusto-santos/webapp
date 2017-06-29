@@ -5,16 +5,19 @@ import Layout from '../../components/Layout'
 import Footer from '../../components/Footer'
 import s from './Content.css'
 
+import { loadAllPosts } from '../../actions/Content/actions'
+
 const title = 'Conteudo Personalizado'
 
 class Content extends Component{
 
   componentWillMount() {
-    console.log(this.props.conteudo)
+    this.props.loadAllPosts()
   }
 
   componentDidMount() {
     document.title = title
+    console.log(this.props.conteudo)
   }
 
   render(){
@@ -32,11 +35,13 @@ class Content extends Component{
   }
 }
 
-function mapStateToProps(state){
+const mapStateToProps = (state) => {
   return{
-    conteudo: state.content
+    conteudo: state.content.conteudo
   }
 }
 
+const mapDispatchToProps = (dispatch) => 
+  bindActionCreators({ loadAllPosts }, dispatch)
 
-export default connect(mapStateToProps)(Content)
+export default connect(mapStateToProps, mapDispatchToProps)(Content)
