@@ -21,3 +21,19 @@ export const loadUser = () => {
 			}))
 	}
 }
+
+export const loadContentMD = (container, file) => {
+	return dispatch => {
+		cnx.get(`/containers/${container}/download/${file}`)
+			then(resp => dispatch({
+				type: 'LOAD_CONTENT_MD',
+				payload: resp.data
+			}))
+	}
+}
+
+// export const loadPostUser = (idPost, idUser) => {
+// 	return dispatch => {
+// 		cnx.get([``])
+// 	}
+// }
