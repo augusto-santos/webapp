@@ -4,7 +4,7 @@
    * ======================================================================== */
 
   --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
-  --font-family-root: "Source Sans Pro", sans-serif;
+  --font-family-root: "Source Code Pro", sans-serif;
   /*
    * Layout
    * ======================================================================== */
@@ -20,7 +20,7 @@
 
   --screen-xs-min: 480px;  /* Extra small screen / phone */
   --screen-sm-min: 768px;  /* Small screen / tablet */
-  --screen-md-min: 992px;  /* Medium screen / desktop */
+  --screen-md-min: 940px;  /* Medium screen / desktop */
   --screen-lg-min: 1200px; /* Large screen / wide desktop */
 }
 

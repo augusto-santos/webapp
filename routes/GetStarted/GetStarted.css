@@ -59,3 +59,8 @@
     color: #555;
     font-weight: 600;
 }
+
+.header_post{
+    padding: 10px;
+    margin: 0.625em 0 1.25em;
+}

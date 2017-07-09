@@ -1,4 +1,4 @@
-import { cnx } from '../../api'
+import { cnx } from '../../core/api'
 import { LOAD_ALL_POSTS } from './constants'
 
 export const loadAllPosts = () => {

@@ -32,5 +32,9 @@
   {
     "path": "/User",
     "component": "./routes/User"
+  },
+  {
+    "path": "/Lore/:title",
+    "component": "./routes/Lore"
   }
 ]

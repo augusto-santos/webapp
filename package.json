@@ -8,6 +8,7 @@
     "history": "^3.0.0",
     "markdown-it": "^8.3.1",
     "markdown-it-highlightjs": "^3.0.0",
+    "markdown-it-toc": "^1.1.0",
     "marked": "^0.3.6",
     "react": "^15.3.0",
     "react-app": "^1.1.2",
@@ -19,6 +20,12 @@
   },
   "devDependencies": {
     "axios": "^0.16.2",
+    "markdown-it-anchor": "^4.0.0",
+    "markdown-it-block-image": "0.0.3",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-decorate": "^1.2.2",
+    "markdown-it-expand-tabs": "^1.0.12",
+    "markdown-it-footnote": "^3.0.1",
     "prop-types": "^15.5.10",
     "react-app-tools": "^1.1.2",
     "redux-promise": "^0.5.3"

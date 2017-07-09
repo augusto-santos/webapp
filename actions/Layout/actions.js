@@ -6,3 +6,9 @@ export const changeSearch = (e) => {
     payload: e.target.value
   }
 }
+
+// export const toggle = () => {
+//   return {
+//     type: TOGGLE_MENU
+//   }
+// }

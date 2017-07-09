@@ -4,12 +4,16 @@ import s from './UserPost.css'
 
 class UserPost extends Component{
     render(){
+        const { avatar, alt, userName, userEmail } = this.props
         return(
             <div className={`${s.publisher}`}>
                 <div className={`${s.avatar}`} >
-                    <Avatar src={this.props.avatar} user={this.props.alt}/>
+                    <Avatar src={avatar} user={alt}/>
                 </div>
-                <h4>{this.props.userName}</h4>
+                <div className={`${s.info}`}>
+                    <h4>{userName}</h4>
+                    <p>{userEmail}</p>
+                </div>
             </div>
         )
     }

@@ -3,5 +3,6 @@
     {"key": 2, "class": "/get-started", "to": "/get-started", "title": "Get Started"},
     {"key": 3, "class": "/post", "to": "/post", "title": "Posts"},
     {"key": 4, "class": "/login", "to": "/login", "title": "Login"},
-    {"key": 5, "class": "/artigos", "to": "/artigos", "title": "Artigos"}
+    {"key": 5, "class": "/artigos", "to": "/artigos", "title": "Artigos"},
+    {"key": 6, "class": "/lore", "to": "/lore/a_profecia_perdida", "title": "Lories"}
 ]

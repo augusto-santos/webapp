@@ -43,7 +43,7 @@ class Layout extends React.Component{
             avatarAlt={c.AvatarProps.AvatarAlt}
             SettingMenu={MenuList}
             UserMenu={MenuUser}
-            toggle={this.handleSidebar} 
+            toggle={(this.handleSidebar)} 
             isOpen={this.state.siderbarOpen}
             search={this.props.search}
             change={this.props.changeSearch} />

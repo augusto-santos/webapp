@@ -1,0 +1,40 @@
+.wysiwyg_toolbar{
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #0a7fa2;
+  background: #ddd;
+}
+
+.toolbar_section{
+  padding-right: 30px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.toolbar_section button{
+  border: none;
+  height: 100%;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  will-change: background;
+  transition: background .3s ease;
+}
+
+.toolbar_section button:hover{
+	background: #c7c7c7;
+}
+
+._active{
+	color: #0a7fa2;
+}
+
+.toolbar_section button i[class=material-icons]{
+	font-size: 20px;
+  color: #444
+}

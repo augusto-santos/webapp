@@ -1,4 +1,4 @@
-import { CHANGE_SEARCH, TOOGLE_MENU } from './constants'
+import { CHANGE_SEARCH } from './constants'
 
 const INITIAL_STATE = {
   search: ''

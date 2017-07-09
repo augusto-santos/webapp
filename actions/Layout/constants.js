@@ -1,1 +1,2 @@
 export const CHANGE_SEARCH = 'CHANGE_SEARCH'
+export const TOGGLE_MENU = 'TOGGLE_MENU'
