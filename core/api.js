@@ -2,7 +2,7 @@ import axios from 'axios'
 
 /** Instancia do axios */
 export const cnx = axios.create({
-		baseURL: 'http://0.0.0.0:5000/api',
+		baseURL: 'https://rest_api-augustosantos55828536.codeanyapp.com/api',
 		// timeout: 1000
 	})
 /** Config Axios */

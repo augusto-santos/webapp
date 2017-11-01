@@ -1,0 +1,1 @@
+export const LOAD_ALL_TASKS = 'LOAD_ALL_TASKS'

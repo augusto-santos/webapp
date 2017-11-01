@@ -1,32 +1,47 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import axios from 'axios'
-import Layout from '../../components/Layout';
-import Markdown from '../../components/Markdown'
-import md from '../../components/Markdown/utils/markdown-parser'
-import s from './Home.css';
 
-const teste = 'http://0.0.0.0:5000/api/containers/container1/download/Post.md'
+import { loadTasks } from '../../actions/home/actions'
+
+import Layout from '../../components/Layout';
+import s from './Home.css';
 const title = 'React App Starter Kit';
+
+function mapStateToProps(state){
+  return{
+    tasks: state.taskers.tasks
+  }
+}
+
+const mapDispatchToProps = dispatch => 
+  bindActionCreators({ loadTasks }, dispatch)
 
 class HomePage extends Component {
 
-  constructor(props){
-    super(props)
-    this.state = { content: {}}
-  }
-
   componentDidMount() {
-    document.title = title;
-    axios.get(teste)
-      .then((resp => this.setState({...this.state, content: md(resp.data)})))
-      .catch((err) => this.setState({...this.state, content: err}))
+    this.props.loadTasks()
+    // console.log(this.props.tasks)
+    document.title = title
   }
 
   render() {
+    const { tasks } = this.props
     return (
       <Layout className={s.content}>
-        <div className={`${s.wrapperContainer}`}>
-          <Markdown Content={this.state.content} />  
+        <div className={`${s.wrapperContainer}`}>  
+          {tasks.map((task)=>{
+            return(
+              <div className={`${s.wrapp}`}>
+                <div className={`${s.wrapper_card}`}>
+                  <h4>{task.Title}</h4>
+                  <p>{task.description}</p>
+                </div>  
+              </div>
+            )
+          })}
         </div>
       </Layout>
     );
@@ -34,4 +49,4 @@ class HomePage extends Component {
 
 }
 
-export default HomePage;
+export default connect(mapStateToProps, mapDispatchToProps)(HomePage)
